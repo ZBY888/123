@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#myCanvas{
+			display: block;
+			border:1px solid pink;
+			margin:20px auto;
+		}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="400" height="400">
+			看见这句话！您改换浏览器了........
+		</canvas>
+		
+		<script type="text/javascript">
+			var canvas = document.getElementById("myCanvas");//获取DOM元素
+			var context = canvas.getContext("2d");//获取画布的上下文（画笔）
+			
+		//画线段
+//			context.strokeStyle = "blue";//画路径颜色
+//			context.moveTo(150,50);//起点位置
+//			context.lineTo(250,150);//终点位置
+//			context.lineTo(100,200);
+//			context.lineTo(150,50);
+//			context.lineWidth = 5;//线宽
+//			context.lineJoin = "round";//线连接的形状
+//			context.lineCap = "square";//线条的结束端点样式
+//			context.stroke();//设置画路径
+
+
+		//画圆
+			context.fillStyle = "red";
+//			context.strokeStyle = "red";
+//			context.moveTo(100,100);
+//			context.lineTo(100,0);
+//			context.moveTo(100,100);
+//			context.lineTo(200,100);
+//			context.closePath();
+			context.arc(100,100,100,Math.PI*1.6,Math.PI*1.8,false);
+			context.stroke();
+			context.fill();
+			
+		</script>
+	</body>
+</html>
